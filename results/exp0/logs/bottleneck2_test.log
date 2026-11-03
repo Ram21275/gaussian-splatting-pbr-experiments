@@ -1,2 +1,13 @@
 k=4 separate_own done 55s
 k=4 separate_both done 81s
+k=4 shared done 106s
+k=4 shared_private done 141s
+k=8 separate_own done 172s
+k=8 separate_both done 196s
+k=8 shared done 228s
+k=8 shared_private done 260s
+k=16 separate_own done 292s
+k=16 separate_both done 319s
+k=16 shared done 343s
+k=16 shared_private done 377s
+wrote outputs/exp0/bottleneck2/BOTTLENECK2_test.md 377.282723903656

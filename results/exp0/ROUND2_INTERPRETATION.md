@@ -50,7 +50,52 @@ Roughness is roughly unchanged (MAE 0.147 → 0.153). 4 steps, 5× ensembling an
 
 **Implication.** Every Experiment 0 result so far uses the **black-background** setting, and its PBR features are therefore weaker than they could be. Re-extracting with a grey background is a candidate change. **Not applied:** per the pre-registered rule it needs its own amendment and a full re-run of the earlier analyses.
 
-## (2) Alignment controls
-*(Filled in once the analysis completes. See `controls/CONTROLS_val.md`.)*
+## (2) Alignment controls (val | test; full tables in `controls/CONTROLS_{val,test}.md`)
 
 **Audit:** the SD2 VAE and the Marigold VAE have identical weights (hash `356f0647e091d2d7`). Every model receives the identical image latent, so a shared input encoding is a confirmed common-cause pathway.
+
+**Linear CKA, true pairs** (shape-bootstrap 95% CI)
+
+| pair | up1 val | up1 test | up2 val | up2 test |
+|---|---|---|---|---|
+| normals~IID (Marigold) | 0.762 | 0.756 | 0.497 | 0.494 |
+| normals~base SD2 (t=261) | 0.697 | 0.698 | 0.551 | 0.538 |
+| IID~base SD2 (t=261) | 0.719 | 0.718 | 0.628 | 0.631 |
+| random-init N(seed0)~random-init I(seed1) | 0.688 | 0.675 | **0.823** | **0.807** |
+
+**Pre-registered reading**
+- At **up2**, normals~IID lies *below* the random-network floor and below both models' alignment to base SD2. It is **not beyond common cause**.
+- At **up1**, it clears both floors only marginally, with interval edges touching: val CI lower bound 0.759 against an upper bound of 0.755.
+- **CKA cannot separate trained-model alignment from what same-image input through a UNet produces.** A random UNet on the same image reaches CKA above 0.8, mostly through low-level image structure. The random networks' CKA collapses under same-shape material swaps (0.82 → 0.27 at up2), while the trained models' CKA falls much less (0.50 → 0.38).
+
+**Raw retrieval at up1** (needs coordinate-level correspondence; R@1 among all objects)
+
+| | val | test |
+|---|---|---|
+| normals→IID | 0.81 [0.75, 0.88] | 0.83 [0.79, 0.88] |
+| normals→base261 | 0.56 [0.46, 0.65] | 0.60 [0.53, 0.66] |
+| IID→base261 | 0.72 [0.64, 0.80] | 0.73 [0.67, 0.80] |
+| random N→random I, normals→random | 0.00 | 0.00–0.005 |
+
+**What this shows**
+- Retrieval works only between networks from the same SD2 initialisation. Random networks score zero.
+- The two task-tuned models retrieve each other at least as well as each retrieves the base. They keep the SD2 coordinate system and drift in correlated ways.
+- This is consistent with **inherited, co-adapted coordinates**. It is **not** evidence of a common geometry/PBR embedding space, and the plan forbids drawing that conclusion from CKA or retrieval.
+
+## Test-split confirmation of (1): run once, after the val reading above was written
+
+| k = 8, test | normal° | depth | albedo | roughness | metallic* |
+|---|---|---|---|---|---|
+| shared − separate_both | +2.7% [+1.8, +3.6] | +1.6% [+0.2, +3.1] | −4.3% [−6.6, −2.4] | −6.2% [−7.7, −4.9] | −0.7% [−3.9, +2.8] |
+| shared − separate_own | −0.2% [−2.0, +1.7] | −4.2% [−6.3, −2.2] | −11.9% [−14.5, −9.1] | −3.3% [−5.3, −1.4] | −8.8% [−13.6, −3.6] |
+| separate_both − separate_own | −2.8% [−4.1, −1.4] | −5.7% [−7.1, −4.3] | −7.9% [−9.9, −6.0] | +3.1% [+1.3, +4.8] | −8.1% [−11.8, −4.5] |
+
+Test reproduces val.
+- **Geometry:** equivalent, within ±5% (normal +2.7%, depth +1.6%).
+- **Materials:** a small shared-code benefit on albedo (−4.3%) and roughness (−6.2%), with CIs straddling the −5% line, so inconclusive under the rule but leaning toward a modest benefit.
+- **The v1/v2 "shared wins" story was mostly input access** (separate_both − separate_own: −8% albedo, −6% depth).
+
+## Overall status after the controls round
+- **Supported:** at matched latent size and parameter count, a shared code is sufficient for geometry and albedo/roughness, with a possible small benefit on materials.
+- **Not supported:** any claim that frozen geometry and PBR features share an embedding space. CKA is explained by common cause, and retrieval by the shared SD2 initialisation.
+- **Next, per plan:** bidirectional stitching with a UNet skip-connection audit. A grey-background re-extraction is a candidate amendment.
