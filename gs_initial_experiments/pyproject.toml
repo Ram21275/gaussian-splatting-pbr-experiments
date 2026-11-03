@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gs-meeting-experiments"
+version = "0.1.0"
+description = "Controlled single-flow and stochastic-interpolant Gaussian experiments"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.4,<3", "numpy>=1.24", "Pillow>=10", "matplotlib>=3.7"]
+
+[project.scripts]
+gs-meeting = "gs_meeting.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["gs_meeting*"]

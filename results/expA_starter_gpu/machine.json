@@ -1,0 +1,13 @@
+{
+  "python": "3.13.11",
+  "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.2.6",
+  "cuda_runtime": "12.8",
+  "cuda_available": true,
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "gpu_vram_bytes": 50857967616,
+  "git_commit": null,
+  "precision": "float32",
+  "renderer": "dense_reference_GGX_isotropic_one_sided_no_shadows"
+}

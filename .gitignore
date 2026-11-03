@@ -1,0 +1,8 @@
+# heavy artefacts live on /media/kavinder/hdd2/RAM/gaussian-splatting (symlinked here)
+data
+outputs
+*.pt
+*.npz
+__pycache__/
+*.egg-info/
+.venv/

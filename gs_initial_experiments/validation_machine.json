@@ -1,0 +1,13 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "torch": "2.15.0+cpu",
+  "numpy": "2.3.5",
+  "cuda_runtime": null,
+  "cuda_available": false,
+  "gpu": null,
+  "gpu_vram_bytes": null,
+  "git_commit": null,
+  "precision": "float32",
+  "renderer": "dense_reference_GGX_isotropic_one_sided_no_shadows"
+}

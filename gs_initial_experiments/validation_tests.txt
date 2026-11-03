@@ -1,0 +1,15 @@
+test_bridge_endpoints_and_finite_velocity (test_core.Tests.test_bridge_endpoints_and_finite_velocity) ... ok
+test_completion_masks_have_heldout_pixels (test_core.Tests.test_completion_masks_have_heldout_pixels) ... ok
+test_corrected_sde_preserves_known_gaussian_variance (test_core.Tests.test_corrected_sde_preserves_known_gaussian_variance) ... ok
+test_decoder_render_gradients_and_ceiling (test_core.Tests.test_decoder_render_gradients_and_ceiling) ... ok
+test_disjoint_and_conditions_no_target_leakage (test_core.Tests.test_disjoint_and_conditions_no_target_leakage) ... ok
+test_every_objective_and_learned_anchor_gradients (test_core.Tests.test_every_objective_and_learned_anchor_gradients) ... ok
+test_resume_matches_uninterrupted_updates (test_core.Tests.test_resume_matches_uninterrupted_updates) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.215s
+
+OK
+A0: checkpoint /tmp/tmpq1ku4p65/full/A0_seed13/checkpoint.pt
+A0: checkpoint /tmp/tmpq1ku4p65/paused/A0_seed13/checkpoint.pt
+A0: checkpoint /tmp/tmpq1ku4p65/paused/A0_seed13/checkpoint.pt

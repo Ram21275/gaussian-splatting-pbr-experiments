@@ -1,0 +1,31 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:   2%|▏         | 7/372 [00:00<00:05, 68.35it/s][A
+Loading weights:   4%|▍         | 14/372 [00:00<00:11, 30.83it/s][A
+Loading weights:  16%|█▋        | 61/372 [00:00<00:02, 119.75it/s][A
+Loading weights:  28%|██▊       | 106/372 [00:00<00:01, 168.06it/s][A
+Loading weights:  34%|███▎      | 125/372 [00:01<00:03, 74.09it/s] [A
+Loading weights:  37%|███▋      | 138/372 [00:01<00:03, 67.41it/s][A
+Loading weights:  67%|██████▋   | 249/372 [00:01<00:00, 186.05it/s][A
+Loading weights:  75%|███████▌  | 280/372 [00:02<00:00, 167.71it/s][A
+Loading weights:  82%|████████▏ | 305/372 [00:02<00:00, 167.26it/s][A
+Loading weights:  92%|█████████▏| 343/372 [00:02<00:00, 178.58it/s][ALoading weights: 100%|██████████| 372/372 [00:02<00:00, 150.01it/s]
+Loading pipeline components...:  40%|████      | 2/5 [00:02<00:04,  1.40s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:03<00:02,  1.17s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:08<00:00,  1.95s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:08<00:00,  1.77s/it]
+[val] normals: 327s pred shape (288, 128, 128, 3)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 22258.89it/s]
+[1mCLIPTextModel LOAD REPORT[0m from: /media/kavinder/hdd2/hf_cache/hub/models--prs-eth--marigold-depth-v1-1/snapshots/9571e7123e258cf052b4e54241f17971c290e9a8/text_encoder
+Key                                | Status     |  | 
+-----------------------------------+------------+--+-
+text_model.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+Loading pipeline components...:  60%|██████    | 3/5 [00:00<00:00, 28.07it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 35.72it/s]
+[val] depth: 309s pred shape (288, 128, 128, 1)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 22246.19it/s]
+Loading pipeline components...:  60%|██████    | 3/5 [00:00<00:00, 27.46it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 35.55it/s]
+[val] iid: 482s pred shape (576, 128, 128, 3)
+{"path": "data/exp0/val.pt", "n": 96, "timing": {"render_s": 440.69145917892456, "normals_s": 326.9902312755585, "depth_s": 308.4188768863678, "iid_s": 481.7988429069519}}

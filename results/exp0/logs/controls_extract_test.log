@@ -1,0 +1,32 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 9748.59it/s]
+Loading pipeline components...:  40%|████      | 2/5 [00:00<00:00, 15.05it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 22.65it/s]
+[test] randN0 154s
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 22540.90it/s]
+Loading pipeline components...:  60%|██████    | 3/5 [00:00<00:00, 26.72it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 32.30it/s]
+[test] randN1 148s
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 13904.39it/s]
+Loading pipeline components...:  60%|██████    | 3/5 [00:00<00:00, 26.08it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 32.60it/s]
+[test] randI0 209s
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 15939.45it/s]
+Loading pipeline components...:  80%|████████  | 4/5 [00:00<00:00, 37.88it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 37.36it/s]
+[test] randI1 200s
+/home/kavinder/miniconda3/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 20064.05it/s]
+Loading pipeline components...:  60%|██████    | 3/5 [00:00<00:00, 20.83it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 22.24it/s]
+Pipelines loaded with `dtype=torch.float16` cannot run with `cpu` device. It is not recommended to move them to `cpu` as running them will fail. Please make sure to use an accelerator to run the pipeline in inference, due to the lack of support for`float16` operations on this device in PyTorch. Please, remove the `torch_dtype=torch.float16` argument, or use another device for inference.
+Pipelines loaded with `dtype=torch.float16` cannot run with `cpu` device. It is not recommended to move them to `cpu` as running them will fail. Please make sure to use an accelerator to run the pipeline in inference, due to the lack of support for`float16` operations on this device in PyTorch. Please, remove the `torch_dtype=torch.float16` argument, or use another device for inference.
+[test] base999 72s
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 18184.88it/s]
+Loading pipeline components...:  60%|██████    | 3/5 [00:00<00:00, 28.28it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 34.74it/s]
+Pipelines loaded with `dtype=torch.float16` cannot run with `cpu` device. It is not recommended to move them to `cpu` as running them will fail. Please make sure to use an accelerator to run the pipeline in inference, due to the lack of support for`float16` operations on this device in PyTorch. Please, remove the `torch_dtype=torch.float16` argument, or use another device for inference.
+Pipelines loaded with `dtype=torch.float16` cannot run with `cpu` device. It is not recommended to move them to `cpu` as running them will fail. Please make sure to use an accelerator to run the pipeline in inference, due to the lack of support for`float16` operations on this device in PyTorch. Please, remove the `torch_dtype=torch.float16` argument, or use another device for inference.
+[test] base261 60s
+{"split": "test", "hashes": {"randN0": "0b0da6e6f4a77c9b", "randN1": "e95f2216a2f14c7f", "randI0": "bdb943f64ab42b6d", "randI1": "0347edfcab2002de", "sd2_unet": "a185e53de7960ed0", "sd2_vae": "356f0647e091d2d7", "marigold_normals_vae": "356f0647e091d2d7"}, "timing": {"randN0": 153.67710256576538, "randN1": 148.1173107624054, "randI0": 208.5589621067047, "randI1": 199.72722244262695, "base999": 71.79769968986511, "base261": 60.099345207214355}, "total": 1048.0420248508453}

@@ -1,0 +1,142 @@
+sanity {
+ "normals_angular_err_deg_mean": 26.06987190246582,
+ "normals_angular_err_deg_median": 19.35543441772461,
+ "depth_absrel_affine_aligned": 0.04062044247984886,
+ "albedo_mae_all": 0.31202974915504456,
+ "roughness_mae_all": 0.1379452347755432,
+ "metallic_mae_all": 0.42944908142089844,
+ "albedo_mae_part": 0.3059752583503723,
+ "roughness_mae_part": 0.1503690779209137,
+ "metallic_mae_part": 0.4403447210788727,
+ "albedo_mae_partition": 0.3180842399597168,
+ "roughness_mae_partition": 0.12552142143249512,
+ "metallic_mae_partition": 0.4185534715652466,
+ "albedo_mae_meanbaseline": 0.19828073680400848,
+ "roughness_mae_meanbaseline": 0.15721186995506287,
+ "metallic_mae_meanbaseline": 0.42462795972824097
+}
+retrieval {
+ "raw_normals_to_iid": {
+  "r1_all": 0.7708333134651184,
+  "chance_all": 0.010416666666666666,
+  "r1_same_shape": 0.8333333134651184,
+  "chance_same_shape": 0.3333333432674408
+ },
+ "raw_normals_to_depth": {
+  "r1_all": 0.9270833134651184,
+  "chance_all": 0.010416666666666666,
+  "r1_same_shape": 0.9479166865348816,
+  "chance_same_shape": 0.3333333432674408
+ },
+ "raw_iid_to_iid_selfcheck": {
+  "r1_all": 1.0,
+  "chance_all": 0.010416666666666666,
+  "r1_same_shape": 1.0,
+  "chance_same_shape": 0.3333333432674408
+ },
+ "adapter_normals_to_iid": {
+  "r1_all": 1.0,
+  "chance_all": 0.010416666666666666,
+  "r1_same_shape": 1.0,
+  "chance_same_shape": 0.3333333432674408
+ }
+}
+probes {
+ "true": {
+  "G->mat_of_G_object": {
+   "all": 0.13820134065520417,
+   "part": 0.04888056022794163,
+   "partition": 0.21241813719844238
+  },
+  "M->geo_of_M_object": {
+   "all": 0.7051454303675195,
+   "part": 0.7341336125539044,
+   "partition": 0.6761572481811344
+  },
+  "G->geo_of_G_object": {
+   "all": 0.7267242865577457,
+   "part": 0.7481468547507342,
+   "partition": 0.7053017183647571
+  },
+  "M->mat_of_M_object": {
+   "all": 0.2670267028623995,
+   "part": 0.1934629462909594,
+   "partition": 0.3267700657109325
+  }
+ },
+ "same_shape": {
+  "G->mat_of_G_object": {
+   "all": 0.13820134065520417,
+   "part": 0.04888056022794163,
+   "partition": 0.21241813719844238
+  },
+  "M->geo_of_M_object": {
+   "all": 0.7051454303675195,
+   "part": 0.7341336125539044,
+   "partition": 0.6761572481811344
+  },
+  "G->geo_of_G_object": {
+   "all": 0.7267242865577457,
+   "part": 0.7481468547507342,
+   "partition": 0.7053017183647571
+  },
+  "M->mat_of_M_object": {
+   "all": 0.2670267028623995,
+   "part": 0.19346294629095917,
+   "partition": 0.32677006571093237
+  }
+ },
+ "any": {
+  "G->mat_of_G_object": {
+   "all": 0.1382756727641391,
+   "part": 0.04965124450717917,
+   "partition": 0.20791599935735083
+  },
+  "M->geo_of_M_object": {
+   "all": 0.6996845789504156,
+   "part": 0.7332993691860945,
+   "partition": 0.6662823247613237
+  },
+  "G->geo_of_G_object": {
+   "all": 0.7205286702478304,
+   "part": 0.74547876738196,
+   "partition": 0.695318969989424
+  },
+  "M->mat_of_M_object": {
+   "all": 0.2711035081121107,
+   "part": 0.20875399147989548,
+   "partition": 0.31730253187686264
+  }
+ }
+}
+affinity {
+ "G->same_matid": {
+  "part": 0.8712610647613191,
+  "partition": 0.7515281834545419,
+  "pos_rate": 0.871399462223053
+ },
+ "G->same_part": {
+  "part": 0.8839434014268904,
+  "partition": 0.8325174385938875,
+  "pos_rate": 0.8902289867401123
+ },
+ "M->same_matid": {
+  "part": 0.8706329043474573,
+  "partition": 0.7594935986404425,
+  "pos_rate": 0.871399462223053
+ },
+ "M->same_part": {
+  "part": 0.8855198185114119,
+  "partition": 0.8318819900138873,
+  "pos_rate": 0.8902289867401123
+ }
+}
+bottleneck marigold/true done 40s
+bottleneck marigold/same_shape done 42s
+bottleneck marigold/any done 45s
+bottleneck gt_oracle/true done 48s
+done 48.416027784347534
+
+real	0m49.940s
+user	8m45.271s
+sys	0m44.979s

@@ -1,0 +1,90 @@
+{
+  "status": "completed",
+  "scope": "DreamLifting-inspired synthetic feasibility prototype",
+  "config": {
+    "data_root": "/media/kavinder/hdd2/RAM/gaussian-splatting/data/gsi_smoke_gpu",
+    "output_root": "/media/kavinder/hdd2/RAM/gaussian-splatting/outputs/gsi/smoke_gpu",
+    "anchors": 16,
+    "size": 16,
+    "target_views": 2,
+    "split_counts": {
+      "train": 4,
+      "val": 2,
+      "test": 2
+    },
+    "data_seed": 2301,
+    "eval_seed": 419,
+    "width": 32,
+    "depth": 1,
+    "heads": 4,
+    "steps": 12,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "accumulation": 1,
+    "grad_clip": 1.0,
+    "cpu_threads": 2,
+    "rgb_weight": 0.1,
+    "score_weight": 1.0,
+    "sigma": 0.05,
+    "source_jitter": 0.02,
+    "sde_strength": 1.0,
+    "time_eps": 0.01,
+    "anchor_weight": 1.0,
+    "anchor_tolerance": 0.0,
+    "anchor_steps": 2,
+    "anchor_every": 1,
+    "coarse_noise_time": 0.5,
+    "checkpoint_every": 4,
+    "latency_repeats": 3,
+    "debug_only": true
+  },
+  "variant": "B1",
+  "seed": 0,
+  "step": 12,
+  "data_hash": "33fbb89dc2f4c2a6add960b5d720945f9f881d4c12f62fef8133db0f77541c11",
+  "train_object_ids": [
+    "object_0000",
+    "object_0001",
+    "object_0002",
+    "object_0003"
+  ],
+  "splits": {
+    "train": [
+      "object_0000",
+      "object_0001",
+      "object_0002",
+      "object_0003"
+    ],
+    "val": [
+      "object_0004",
+      "object_0005"
+    ],
+    "test": [
+      "object_0006",
+      "object_0007"
+    ]
+  },
+  "coarse_checkpoint": "/media/kavinder/hdd2/RAM/gaussian-splatting/outputs/gsi/smoke_gpu/A0_seed0/checkpoint.pt",
+  "coarse_hash": "e81e758f0583c3cdd9d146b770f8eed19171a4ef8056145f93d68eeb22713e99",
+  "hardware": {
+    "python": "3.13.11",
+    "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+    "torch": "2.8.0+cu128",
+    "numpy": "2.2.6",
+    "cuda_runtime": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA RTX 6000 Ada Generation",
+    "gpu_vram_bytes": 50857967616,
+    "git_commit": null,
+    "precision": "float32",
+    "renderer": "dense_reference_GGX_isotropic_one_sided_no_shadows"
+  },
+  "total_parameters": 26714,
+  "trainable_parameters": 26714,
+  "parameters_with_gradient_last_step": 26714,
+  "training_wall_seconds": 1.393411703997117,
+  "training_gpu_hours": 0.00038705880666586585,
+  "peak_vram_bytes": 19689984,
+  "render_backward_views": 72,
+  "checkpoint": "/media/kavinder/hdd2/RAM/gaussian-splatting/outputs/gsi/smoke_gpu/B1_seed0/checkpoint.pt"
+}

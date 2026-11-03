@@ -1,0 +1,41 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 8682.94it/s]
+Loading pipeline components...:  40%|████      | 2/5 [00:00<00:00, 15.53it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 26.37it/s]
+[train] normals: 288s pred shape (1440, 128, 128, 3)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:00<00:03,  1.20it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:   2%|▏         | 9/372 [00:00<00:26, 13.79it/s][A
+Loading weights:   3%|▎         | 11/372 [00:00<00:24, 14.76it/s][A
+Loading weights:  26%|██▋       | 98/372 [00:00<00:01, 176.82it/s][A
+Loading weights:  38%|███▊      | 143/372 [00:00<00:00, 232.37it/s][A
+Loading weights:  48%|████▊     | 179/372 [00:01<00:01, 144.20it/s][A
+Loading weights:  55%|█████▌    | 205/372 [00:01<00:01, 138.99it/s][A
+Loading weights:  61%|██████    | 227/372 [00:02<00:01, 108.17it/s][A
+Loading weights:  76%|███████▌  | 281/372 [00:02<00:00, 164.72it/s][A
+Loading weights:  83%|████████▎ | 307/372 [00:02<00:00, 174.49it/s][A
+Loading weights:  89%|████████▉ | 332/372 [00:02<00:00, 155.92it/s][ALoading weights: 100%|██████████| 372/372 [00:02<00:00, 150.67it/s]
+[1mCLIPTextModel LOAD REPORT[0m from: /media/kavinder/hdd2/hf_cache/hub/models--prs-eth--marigold-depth-v1-1/snapshots/9571e7123e258cf052b4e54241f17971c290e9a8/text_encoder
+Key                                | Status     |  | 
+-----------------------------------+------------+--+-
+text_model.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+Loading pipeline components...:  40%|████      | 2/5 [00:03<00:05,  1.94s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:08<00:00,  1.85s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:08<00:00,  1.80s/it]
+[train] depth: 294s pred shape (1440, 128, 128, 1)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:00<00:02,  1.42it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:   2%|▏         | 9/372 [00:00<00:17, 20.77it/s][A
+Loading weights:   3%|▎         | 12/372 [00:00<00:25, 14.24it/s][A
+Loading weights:   7%|▋         | 27/372 [00:00<00:09, 38.03it/s][A
+Loading weights:   9%|▉         | 35/372 [00:01<00:08, 37.87it/s][A
+Loading weights:  22%|██▏       | 80/372 [00:01<00:03, 94.74it/s][A
+Loading weights:  25%|██▍       | 92/372 [00:01<00:03, 80.69it/s][A
+Loading weights:  32%|███▏      | 120/372 [00:01<00:02, 100.36it/s][A
+Loading weights:  44%|████▍     | 163/372 [00:02<00:01, 118.07it/s][A
+Loading weights:  47%|████▋     | 176/372 [00:02<00:01, 111.08it/s][A
+Loading weights:  51%|█████     | 188/372 [00:02<00:01, 103.52it/s][ALoading weights: 100%|██████████| 372/372 [00:02<00:00, 155.27it/s]
+Loading pipeline components...:  40%|████      | 2/5 [00:03<00:05,  1.93s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:08<00:00,  1.82s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:08<00:00,  1.76s/it]
+[train] iid: 447s pred shape (2880, 128, 128, 3)
+{"path": "data/exp0/train.pt", "n": 480, "timing": {"render_s": 441.75201511383057, "normals_s": 287.38802790641785, "depth_s": 293.82511949539185, "iid_s": 446.7611765861511}}
